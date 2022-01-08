@@ -120,17 +120,17 @@ Definition at line 141 of file index.\+py.
 
 Get data amount. 
 
-This function gets information on from our database, and returns a J\+S\+ON Object with the number of indexed videos and channels. If no entries are found it returns 0.
+This function gets information on from our database, and returns either a webpage with the data or if specified, a J\+S\+ON Object with the number of indexed videos and channels. If no entries are found it returns 0.
 
 
 \begin{DoxyParams}{Parameters}
-{\em None} & None \\
+{\em type} & Specify format, if this is blank it will return in H\+T\+ML format, if this key has the value \char`\"{}json\char`\"{} a json string will be returned. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A J\+S\+ON dictionary like this one\+: \char`\"{}\{\char`\"{}channel\+\_\+count\char`\"{}\+:1,\char`\"{}video\+\_\+count\char`\"{}\+:2\}\char`\"{}
+Webpage or a J\+S\+ON dictionary like this one\+: \char`\"{}\{\char`\"{}channel\+\_\+count\char`\"{}\+:1,\char`\"{}video\+\_\+count\char`\"{}\+:2\}\char`\"{}
 \end{DoxyReturn}
-Examples\+: curl \href{http://localhost:5000/api/db-count}{\texttt{ http\+://localhost\+:5000/api/db-\/count}} Returns\+: \{\char`\"{}channel\+\_\+count\char`\"{}\+:1,\char`\"{}video\+\_\+count\char`\"{}\+:2\} 
+Examples\+: curl \href{http://localhost:5000/api/db-count?type=json}{\texttt{ http\+://localhost\+:5000/api/db-\/count?type=json}} Returns\+: \{\char`\"{}channel\+\_\+count\char`\"{}\+:1,\char`\"{}video\+\_\+count\char`\"{}\+:2\} 
 
 Definition at line 401 of file index.\+py.
 
@@ -260,7 +260,7 @@ Raises\+: Database entry.
 
 Examples\+: curl -\/X P\+O\+ST -\/H \char`\"{}\+Content-\/\+Type\+: application/json\char`\"{} -\/d \textquotesingle{}\{\char`\"{}yturl\char`\"{}\+:Y\+T\+U\+RL,\char`\"{}lbryurl\char`\"{}\+:L\+B\+R\+Y\+U\+RL\}\textquotesingle{} \href{http://localhost:5000/api/submit-video}{\texttt{ http\+://localhost\+:5000/api/submit-\/video}} Returns\+: 204 
 
-Definition at line 440 of file index.\+py.
+Definition at line 442 of file index.\+py.
 
 
 
