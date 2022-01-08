@@ -97,6 +97,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a7aba84fa123e655e0205c452394c8f25"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8py.html#a7aba84fa123e655e0205c452394c8f25">apimod.index.getlurl</a> ()</td></tr>
 <tr class="memdesc:a7aba84fa123e655e0205c452394c8f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get information about a YouTube Video.  <a href="index_8py.html#a7aba84fa123e655e0205c452394c8f25">More...</a><br /></td></tr>
 <tr class="separator:a7aba84fa123e655e0205c452394c8f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f8d9d8f5a8dc75d7a19b775fb5ea16"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8py.html#aa6f8d9d8f5a8dc75d7a19b775fb5ea16">apimod.index.getdbcount</a> ()</td></tr>
+<tr class="memdesc:aa6f8d9d8f5a8dc75d7a19b775fb5ea16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get data amount.  <a href="index_8py.html#aa6f8d9d8f5a8dc75d7a19b775fb5ea16">More...</a><br /></td></tr>
+<tr class="separator:aa6f8d9d8f5a8dc75d7a19b775fb5ea16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ea03ed8f4892134cd1b3a4fe171a33"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8py.html#a03ea03ed8f4892134cd1b3a4fe171a33">apimod.index.submv</a> ()</td></tr>
+<tr class="memdesc:a03ea03ed8f4892134cd1b3a4fe171a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit a request.  <a href="index_8py.html#a03ea03ed8f4892134cd1b3a4fe171a33">More...</a><br /></td></tr>
+<tr class="separator:a03ea03ed8f4892134cd1b3a4fe171a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -188,6 +194,36 @@ Author(s)</h1>
 <p>Writes an error in the above seen JSON format into the "error-reports" file. </p>
 
 <p class="definition">Definition at line <a class="el" href="index_8py_source.html#l00141">141</a> of file <a class="el" href="index_8py_source.html">index.py</a>.</p>
+
+</div>
+</div>
+<a id="aa6f8d9d8f5a8dc75d7a19b775fb5ea16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6f8d9d8f5a8dc75d7a19b775fb5ea16">&#9670;&nbsp;</a></span>getdbcount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def apimod.index.getdbcount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get data amount. </p>
+<p>This function gets information on from our database, and returns a JSON Object with the number of indexed videos and channels. If no entries are found it returns 0.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td>None </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A JSON dictionary like this one: "{"channel_count":1,"video_count":2}"</dd></dl>
+<p>Examples: curl <a href="http://localhost:5000/api/db-count">http://localhost:5000/api/db-count</a> Returns: {"channel_count":1,"video_count":2} </p>
+
+<p class="definition">Definition at line <a class="el" href="index_8py_source.html#l00401">401</a> of file <a class="el" href="index_8py_source.html">index.py</a>.</p>
 
 </div>
 </div>
@@ -305,9 +341,41 @@ Author(s)</h1>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The API documentation in HTML. Raises: 200 OK </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The API documentation in pdf. Raises: 200 OK </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="index_8py_source.html#l00112">112</a> of file <a class="el" href="index_8py_source.html">index.py</a>.</p>
+
+</div>
+</div>
+<a id="a03ea03ed8f4892134cd1b3a4fe171a33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03ea03ed8f4892134cd1b3a4fe171a33">&#9670;&nbsp;</a></span>submv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def apimod.index.submv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Submit a request. </p>
+<p>This function lets a user submit a request to our server containing a youtube video url and a lbry url. The submissions will be manually verified by an admin.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">yturl</td><td>Youtube URL </td></tr>
+    <tr><td class="paramname">lbryurl</td><td>LBRY URL</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>204</dd></dl>
+<p>Raises: Database entry.</p>
+<p>Examples: curl -X POST -H "Content-Type: application/json" -d '{"yturl":YTURL,"lbryurl":LBRYURL}' <a href="http://localhost:5000/api/submit-video">http://localhost:5000/api/submit-video</a> Returns: 204 </p>
+
+<p class="definition">Definition at line <a class="el" href="index_8py_source.html#l00440">440</a> of file <a class="el" href="index_8py_source.html">index.py</a>.</p>
 
 </div>
 </div>

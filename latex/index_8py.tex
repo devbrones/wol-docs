@@ -17,7 +17,11 @@ def \mbox{\hyperlink{index_8py_a35b86d18072e4b45400f1d8f8976a913}{apimod.\+index
 def \mbox{\hyperlink{index_8py_a691b38ca85b1d82b54e4d1f82b811ff7}{apimod.\+index.\+getlch}} ()
 \begin{DoxyCompactList}\small\item\em Get information about a You\+Tube Channel. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{index_8py_a7aba84fa123e655e0205c452394c8f25}{apimod.\+index.\+getlurl}} ()
-\begin{DoxyCompactList}\small\item\em Get information about a You\+Tube Video. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get information about a You\+Tube Video. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{index_8py_aa6f8d9d8f5a8dc75d7a19b775fb5ea16}{apimod.\+index.\+getdbcount}} ()
+\begin{DoxyCompactList}\small\item\em Get data amount. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{index_8py_a03ea03ed8f4892134cd1b3a4fe171a33}{apimod.\+index.\+submv}} ()
+\begin{DoxyCompactList}\small\item\em Submit a request. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -105,6 +109,30 @@ Examples\+: curl -\/X P\+O\+ST -\/H \char`\"{}\+Content-\/\+Type\+: application/
 Writes an error in the above seen J\+S\+ON format into the \char`\"{}error-\/reports\char`\"{} file. 
 
 Definition at line 141 of file index.\+py.
+
+\mbox{\label{index_8py_aa6f8d9d8f5a8dc75d7a19b775fb5ea16}} 
+\index{index.py@{index.py}!getdbcount@{getdbcount}}
+\index{getdbcount@{getdbcount}!index.py@{index.py}}
+\doxysubsubsection{\texorpdfstring{getdbcount()}{getdbcount()}}
+{\footnotesize\ttfamily def apimod.\+index.\+getdbcount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get data amount. 
+
+This function gets information on from our database, and returns a J\+S\+ON Object with the number of indexed videos and channels. If no entries are found it returns 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & None \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A J\+S\+ON dictionary like this one\+: \char`\"{}\{\char`\"{}channel\+\_\+count\char`\"{}\+:1,\char`\"{}video\+\_\+count\char`\"{}\+:2\}\char`\"{}
+\end{DoxyReturn}
+Examples\+: curl \href{http://localhost:5000/api/db-count}{\texttt{ http\+://localhost\+:5000/api/db-\/count}} Returns\+: \{\char`\"{}channel\+\_\+count\char`\"{}\+:1,\char`\"{}video\+\_\+count\char`\"{}\+:2\} 
+
+Definition at line 401 of file index.\+py.
 
 \mbox{\label{index_8py_a691b38ca85b1d82b54e4d1f82b811ff7}} 
 \index{index.py@{index.py}!getlch@{getlch}}
@@ -200,11 +228,39 @@ This function literally does nothing but that.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The A\+PI documentation in H\+T\+ML. Raises\+: 200 OK 
+The A\+PI documentation in pdf. Raises\+: 200 OK 
 \end{DoxyReturn}
 
 
 Definition at line 112 of file index.\+py.
+
+\mbox{\label{index_8py_a03ea03ed8f4892134cd1b3a4fe171a33}} 
+\index{index.py@{index.py}!submv@{submv}}
+\index{submv@{submv}!index.py@{index.py}}
+\doxysubsubsection{\texorpdfstring{submv()}{submv()}}
+{\footnotesize\ttfamily def apimod.\+index.\+submv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Submit a request. 
+
+This function lets a user submit a request to our server containing a youtube video url and a lbry url. The submissions will be manually verified by an admin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em yturl} & Youtube U\+RL \\
+\hline
+{\em lbryurl} & L\+B\+RY U\+RL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+204
+\end{DoxyReturn}
+Raises\+: Database entry.
+
+Examples\+: curl -\/X P\+O\+ST -\/H \char`\"{}\+Content-\/\+Type\+: application/json\char`\"{} -\/d \textquotesingle{}\{\char`\"{}yturl\char`\"{}\+:Y\+T\+U\+RL,\char`\"{}lbryurl\char`\"{}\+:L\+B\+R\+Y\+U\+RL\}\textquotesingle{} \href{http://localhost:5000/api/submit-video}{\texttt{ http\+://localhost\+:5000/api/submit-\/video}} Returns\+: 204 
+
+Definition at line 440 of file index.\+py.
 
 
 

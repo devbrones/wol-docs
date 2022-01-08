@@ -23,10 +23,23 @@ Install dependencies\+:
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Run the API:}
+\DoxyCodeLine{Fetch submodules:}
 \DoxyCodeLine{}
-\DoxyCodeLine{```pipenv run python src/apimod/index.p}
+\DoxyCodeLine{```git submodules update \&\& cd docs/wol-\/docs \&\& git pul}
 \end{DoxyCode}
 
 
-See /docs/html/index.html for more info. 
+Configure api settings in /src/apimod/apcnf.py
+
+Run the A\+PI\+:
+
+{\ttfamily pipenv run python \mbox{\hyperlink{index_8py}{src/apimod/index.\+py}}}
+
+See docs for more info.
+
+{\bfseries{Common issues\+:}} P\+: Infinite loading after running the command.
+
+F\+:
+\begin{DoxyItemize}
+\item Make sure you have configured /src/apimod/apcnf.py properly. 
+\end{DoxyItemize}

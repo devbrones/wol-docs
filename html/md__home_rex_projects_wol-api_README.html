@@ -81,10 +81,17 @@ Watch-on-LBRY API proxy that saves data from LBRY to a database</h1>
 <div class="line"> </div>
 <div class="line">```cd wol-ap</div>
 </div><!-- fragment --><p>Install dependencies:</p>
-<div class="fragment"><div class="line">Run the API:</div>
+<div class="fragment"><div class="line">Fetch submodules:</div>
 <div class="line"> </div>
-<div class="line">```pipenv run python src/apimod/index.p</div>
-</div><!-- fragment --><p>See /docs/html/index.html for more info. </p>
+<div class="line">```git submodules update &amp;&amp; cd docs/wol-docs &amp;&amp; git pul</div>
+</div><!-- fragment --><p>Configure api settings in /src/apimod/apcnf.py</p>
+<p>Run the API:</p>
+<p><code>pipenv run python <a class="el" href="index_8py.html" title="The main file where the API functions are declared.">src/apimod/index.py</a></code></p>
+<p>See docs for more info.</p>
+<p><b>Common issues:</b> P: Infinite loading after running the command.</p>
+<p>F:</p><ul>
+<li>Make sure you have configured /src/apimod/apcnf.py properly. </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
