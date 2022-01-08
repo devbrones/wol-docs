@@ -1,0 +1,26 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}index.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py, The home of our A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Description and Copyright notice.}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Notes}{1}{section.1.2}%
+\contentsline {chapter}{\numberline {2}W\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}O\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PI}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Watch-\/on-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}B\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Y A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I proxy that saves data from L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}B\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Y to a database}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}apimod.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}apcnf.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Config Class Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
+\contentsline {chapter}{\numberline {4}File Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}index.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py File Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{8}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}description\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}index}{8}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Libraries/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modules}{8}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}To\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Do}{8}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Author(s)}{8}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Function Documentation}{8}{subsection.4.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.6.1}error\_report()}{8}{subsubsection.4.1.6.1}%
+\contentsline {subsubsection}{\numberline {4.1.6.2}getdbcount()}{9}{subsubsection.4.1.6.2}%
+\contentsline {subsubsection}{\numberline {4.1.6.3}getlch()}{9}{subsubsection.4.1.6.3}%
+\contentsline {subsubsection}{\numberline {4.1.6.4}getlurl()}{10}{subsubsection.4.1.6.4}%
+\contentsline {subsubsection}{\numberline {4.1.6.5}isonline()}{10}{subsubsection.4.1.6.5}%
+\contentsline {subsubsection}{\numberline {4.1.6.6}ret\_ok()}{11}{subsubsection.4.1.6.6}%
+\contentsline {subsubsection}{\numberline {4.1.6.7}submv()}{11}{subsubsection.4.1.6.7}%
+\contentsline {subsection}{\numberline {4.1.7}Variable Documentation}{12}{subsection.4.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.7.1}con}{12}{subsubsection.4.1.7.1}%
